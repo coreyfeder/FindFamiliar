@@ -1,0 +1,11 @@
+.NavContainer {
+    width: 100vw;
+    height: 200px;
+    background-color: navy;
+}
+
+/*
+Always: full-width
+Large: show all items
+Small: expand down from hamburger?
+*/

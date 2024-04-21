@@ -1,6 +1,6 @@
-.Pic {
+.NavItem {
     height: 200px;
     width: 200px;
     background-color: pink;
-    border: none;
+    border: red dotted;
 }
