@@ -1,0 +1,7 @@
+.Card {
+    height: 500px;
+    width: 300px;
+    background-color: cadetblue;
+    border-radius: 5%;
+    border: 1px solid black;
+}

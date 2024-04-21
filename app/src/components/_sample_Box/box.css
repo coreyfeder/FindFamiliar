@@ -1,0 +1,10 @@
+.Box {
+    border: 2px black solid;
+    background-color: cornflowerblue;
+    width: 200px;
+    height: 400px;
+}
+
+.Box > * {
+    text-align: center;
+}
