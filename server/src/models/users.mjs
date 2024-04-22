@@ -6,3 +6,5 @@ const userSchema = new mongoose.Schema({
     name: { type: String, trim: true, required: true, },
     familiars: [ familiarSchema ],
 });
+
+export default mongoose.model(schema=userSchema, collection="users");

@@ -24,3 +24,5 @@ const familiarSchema = new mongoose.Schema({
     peril: { type: Number, required: true, },
     peril_note: { type: String, trim: true, },
 });
+
+export default mongoose.model(schema=familiarSchema, collection="familiars");
