@@ -8,6 +8,7 @@ const userSchema = new mongoose.Schema({
         new mongoose.Schema({
             name: String,
             familiar: {
+                // conflicting recs on whether to use Schema.Types.ObjectId or SchemaTypes.ObjectId
                 type: mongoose.SchemaTypes.ObjectId,
                 ref: "Familiar",
                 required: true,
@@ -28,4 +29,5 @@ const userSchema = new mongoose.Schema({
     ],
 });
 
-export default mongoose.model(schema=userSchema, collection="users");
+const User = mongoose.model(schema=userSchema, collection="users");
+export default User;
