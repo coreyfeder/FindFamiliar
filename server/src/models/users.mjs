@@ -1,9 +1,12 @@
 import mongoose from "mongoose";
 
+// `roster` is a legitimate subdocument array, but the `familiar`
+// each subdoc holds is a *populated* document, NOT a subdocument.
+// The `$lookup` call to populate it is slow and costly; consider
+// limiting the number of familiars a roster can hold.
+
 const userSchema = new mongoose.Schema({
-    // IF making a fake ID for fake auth
-    // id: { type: String, trim: true, required: true, index: text, },
-    name: { type: String, trim: true, required: true, },
+    name: { type: String, trim: true, required: true, default: "Caretaker" },
     roster: [
         new mongoose.Schema({
             name: {
@@ -11,7 +14,7 @@ const userSchema = new mongoose.Schema({
                 required: true,
                 maxlength: 42,
                 trim: true,
-                default: "",
+                default: this.familiar.name,
             },
             familiar: {
                 // conflicting recs on whether to use Schema.Types.ObjectId or SchemaTypes.ObjectId
@@ -25,17 +28,9 @@ const userSchema = new mongoose.Schema({
                 maxlength: 500,
                 default: "",
             },
-            // images: [ /* ??? */ ],
-            // as BinData?
-            // use GridFS? https://www.mongodb.com/docs/manual/core/gridfs/
-            // use mongoose-gridstore plugin?
-            //      https://www.npmjs.com/package/mongoose-gridstore
-            // use mongoose-gm plugin for images?
-            //      https://www.npmjs.com/package/mongoose-gm
-            // use multer? https://github.com/expressjs/multer#usage
-        })
+        }),
     ],
 });
 
-const User = mongoose.model(schema=userSchema, collection="users");
+const User = mongoose.model((schema = userSchema), (collection = "users"));
 export default User;

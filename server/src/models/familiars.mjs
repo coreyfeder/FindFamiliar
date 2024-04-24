@@ -8,8 +8,6 @@ const statSchema = new mongoose.Schema({
 const familiarSchema = new mongoose.Schema({
     name: { type: String, trim: true, required: true, index: text },
     description: { type: String, trim: true, required: true, default: "" },
-    environment: { type: String, trim: true },
-    trust: { type: String, trim: true },
     stats: {
         offense: { type: statSchema, default: () => ({}) },
         defense: { type: statSchema, default: () => ({}) },
@@ -18,7 +16,6 @@ const familiarSchema = new mongoose.Schema({
         cuddle_tolerance: { type: statSchema, default: () => ({}) },
         stealth: { type: statSchema, default: () => ({}) },
         intimidation: { type: statSchema, default: () => ({}) },
-        individuality: { type: statSchema, default: () => ({}) },
         peril: { type: statSchema, default: () => ({}) },
     },
 });
