@@ -1,15 +1,15 @@
 import mongoose from "mongoose";
 
 const statSchema = new mongoose.Schema({
-    value: { type: Number, required: true, },
-    note: { type: String, trim: true, },
-})
+    value: { type: Number, required: true },
+    note: { type: String, trim: true },
+});
 
 const familiarSchema = new mongoose.Schema({
-    name: { type: String, trim: true, required: true, index: text, },
-    description: { type: String, trim: true, required: true, },
-    environment: { type: String, trim: true, },
-    trust: { type: String, trim: true, },
+    name: { type: String, trim: true, required: true, index: text },
+    description: { type: String, trim: true, required: true, default: "" },
+    environment: { type: String, trim: true },
+    trust: { type: String, trim: true },
     stats: {
         offense: { type: statSchema, default: () => ({}) },
         defense: { type: statSchema, default: () => ({}) },
@@ -20,10 +20,10 @@ const familiarSchema = new mongoose.Schema({
         intimidation: { type: statSchema, default: () => ({}) },
         individuality: { type: statSchema, default: () => ({}) },
         peril: { type: statSchema, default: () => ({}) },
-    }
+    },
 });
 
 // const Familiar = mongoose.model(schema=familiarSchema, collection="familiars");
-const Familiar = mongoose.model('Familiar', familiarSchema);
+const Familiar = mongoose.model("Familiar", familiarSchema);
 
 export default Familiar;

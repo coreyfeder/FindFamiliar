@@ -6,7 +6,13 @@ const userSchema = new mongoose.Schema({
     name: { type: String, trim: true, required: true, },
     roster: [
         new mongoose.Schema({
-            name: String,
+            name: {
+                type: String,
+                required: true,
+                maxlength: 42,
+                trim: true,
+                default: "",
+            },
             familiar: {
                 // conflicting recs on whether to use Schema.Types.ObjectId or SchemaTypes.ObjectId
                 type: mongoose.SchemaTypes.ObjectId,
@@ -15,7 +21,9 @@ const userSchema = new mongoose.Schema({
             },
             note: {
                 type: String,
+                trim: true,
                 maxlength: 500,
+                default: "",
             },
             // images: [ /* ??? */ ],
             // as BinData?
