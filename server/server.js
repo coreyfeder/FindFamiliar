@@ -1,8 +1,11 @@
 import "dotenv/config";
 import connectDB from "./config/db.js";
-
 import cors from "cors"
 import express from "express";
+// import familiarsController from "./controllers/familiars.js";
+// import rostersController from "./controllers/rosters.js";
+// import usersController from "./controllers/users.js";
+
 
 const port = process.env.PORT || 5000;
 connectDB();
@@ -16,42 +19,83 @@ app.use(express.json());
 app.use("/", router);
 
 
+function emitLog(logData) {
+    console.log(
+        [new Date().toISOString(), ...logData].join(" : "),
+    );
+}
+
+
 // ROUTER
 
 // use a router to log the transactions
 router.use((req, res, next) => {
-    console.debug("DEBUG: ", req.body)
-    console.log(
-        [
-            new Date().toISOString(),
-            "req",
-            req.method,
-            req.path,
-            JSON.stringify(req.body),
-        ].join(" : "),
-    );
+    emitlog([
+        "req",
+        req.method,
+        req.path,
+        JSON.stringify(req.body),
+    ]);
     next();
 });
 
+
 // ROUTES
 
+/*
+
+// familiars stays read-only
+app.route("/familiars")
+    .get(familiarsController.fetchFamiliars)
+app.route("/familiars/:familiar_id")
+    .get(familiarsController.fetchFamiliar(familiar_id))
+
+app.route("/users/:user_id")
+    .get(usersController.TODO("..."))
+    .post(usersController.TODO("..."))
+    .put(usersController.TODO("..."))
+    .delete(usersController.TODO("..."));
+
+app.route("/users/:user_id/roster")
+    .get(rostersController.TODO("..."))
+    .post(rostersController.TODO("..."))
+    .put(rostersController.TODO("..."))
+    .delete(rostersController.TODO("..."));
+
+app.route("/users/:user_id/roster/:roster_id")
+    .get(rostersController.TODO("..."))
+    .post(rostersController.TODO("..."))
+    .put(rostersController.TODO("..."))
+    .delete(rostersController.TODO("..."));
+
+ */
+
+
+app.all("/*", (req, res) => { /* return 403 */ });
+
+// any other resource request
+app.use((req, res, next) => {
+    emitlog([
+        "403",
+        req.method,
+        req.path,
+    ]);
+    res.status(404).json({error: "Resource not found."});
+});
+
+app.use((err, req, res, next) => {
+    emitLog(["Call failed unrecoverably", req.path]);
+    console.error(err.stack);
+    res.status(404).json({error: `Error accessing resource. ${err}`});
+});
 
 
 
-app.get("/", (req, res)=>{
-    res.send("Behold, an API route. Technically.")
-})
 
-app.get("/api/products",( req, res)=>{
-    res.json(products)
-})
 
-app.get("/api/products/:id",( req, res)=>{
-    const product = products.find((p)=> p._id === req.params.id)
-    res.json(product)
-})
 
+// ENGAGE
 
 app.listen(port, ()=>{
-    console.log(`listening on port ${port}`)
+    console.log(`FFAPI listening on port ${port}`)
 })
