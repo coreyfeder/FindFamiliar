@@ -17,7 +17,6 @@ const userSchema = new mongoose.Schema({
                 default: this.familiar.name,
             },
             familiar: {
-                // conflicting recs on whether to use Schema.Types.ObjectId or SchemaTypes.ObjectId
                 type: mongoose.SchemaTypes.ObjectId,
                 ref: "Familiar",
                 required: true,

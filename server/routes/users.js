@@ -1,6 +1,7 @@
-import user from "./models/users.mjs";
+import user from "../models/users.mjs";
 
 // sample/outline functions. don't write them until I finalize the "user" flow
+// make sure to use async/await
 
 function saveUserIdToClient() {
     // TODO
@@ -54,8 +55,8 @@ async function fetchUser(id) {
 
 }
 
-/*
-function internallyProcessApiRequest(req, res) {
+/* s
+async function internallyProcessApiRequest(req, res) {
     doStuffWithRequest(req);
     call_database(req.params.some_variable_from_the_path);
     etc();

@@ -2,9 +2,10 @@ import "dotenv/config";
 import connectDB from "./config/db.js";
 import cors from "cors"
 import express from "express";
-// import familiarsController from "./controllers/familiars.js";
-// import rostersController from "./controllers/rosters.js";
-// import usersController from "./controllers/users.js";
+import routes from "./routes/index.js";
+// import familiarRoutes from "./routes/familiars.js";
+// import rostersController from "./routes/rosters.js";
+// import usersController from "./routes/users.js";
 
 
 const port = process.env.PORT || 5000;
@@ -15,7 +16,6 @@ const router = express.Router();
 
 app.use(cors());
 app.use(express.json());
-// app.use(express.urlencoded());
 app.use("/", router);
 
 
@@ -30,7 +30,7 @@ router.use((req, res, next) => {
             req.method,
             req.path,
             JSON.stringify(req.body),
-        ]
+        ].join(" : ")
     );
     next();
 });
@@ -41,9 +41,12 @@ router.use((req, res, next) => {
 
 // familiars stays read-only
 app.route("/familiars")
-.get(familiarsController.fetchFamiliars)
-app.route("/familiars/:familiar_id")
-.get(familiarsController.fetchFamiliar(familiar_id))
+    // .all((req,res) => )
+    .get((req, res) => routes.familiarRoutes.getFamiliarList(req, res))
+    app.route("/familiars/id/:familiar_id")
+    .get((req, res) => routes.familiarRoutes.getFamiliarById(req, res))
+    app.route("/familiars/name/:familiar_name")
+    .get((req, res) => routes.familiarRoutes.getFamiliarByName(req, res));
 
 /*
 app.route("/users/:user_id")
@@ -74,11 +77,11 @@ app.all("*", (req, res) => {
 
 app.use((err, req, res, next) => {
     console.error(
-        new Date().toISOString(),
-        " : ",
-        "Call failed unrecoverably!",
-        " : ",
-        req.path,
+        [
+            new Date().toISOString(),
+            "Call failed unrecoverably!",
+            req.path,
+        ].join(" : ")
     );
     console.error(err.stack);
     res.status(404).json({error: `Error accessing resource. ${err}`});
@@ -93,4 +96,4 @@ app.use((err, req, res, next) => {
 
 app.listen(port, ()=>{
     console.log(`FFAPI listening on port ${port}`)
-})
+});

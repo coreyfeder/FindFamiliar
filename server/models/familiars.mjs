@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const familiarSchema = new mongoose.Schema({
-    name: { type: String, trim: true, required: true, index: text },
+    name: { type: String, trim: true, required: true },  // add index: text?
     description: { type: String, trim: true, required: true, default: "" },
     stats: {
         offense: { type: Number, required: true },
