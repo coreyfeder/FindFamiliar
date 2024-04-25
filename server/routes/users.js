@@ -1,4 +1,4 @@
-import user from "../models/users.mjs";
+import user from "./models/users.mjs";
 
 // sample/outline functions. don't write them until I finalize the "user" flow
 

@@ -1,4 +1,4 @@
-import familiar from "../models/familiars.mjs";
+import familiar from "./models/familiars.mjs";
 
 function getFamiliarList(req, res) {
     let familiarList = familiar.find().projection(exclude { '_id' })
