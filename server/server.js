@@ -19,37 +19,33 @@ app.use(express.json());
 app.use("/", router);
 
 
-function emitLog(logData) {
-    console.log(
-        [new Date().toISOString(), ...logData].join(" : "),
-    );
-}
-
-
 // ROUTER
 
-// use a router to log the transactions
+// router logs all the incoming calls, before they're processed
 router.use((req, res, next) => {
-    emitlog([
-        "req",
-        req.method,
-        req.path,
-        JSON.stringify(req.body),
-    ]);
+    console.log(
+        [
+            new Date().toISOString(),
+            "req",
+            req.method,
+            req.path,
+            JSON.stringify(req.body),
+        ]
+    );
     next();
 });
 
 
 // ROUTES
 
-/*
 
 // familiars stays read-only
 app.route("/familiars")
-    .get(familiarsController.fetchFamiliars)
+.get(familiarsController.fetchFamiliars)
 app.route("/familiars/:familiar_id")
-    .get(familiarsController.fetchFamiliar(familiar_id))
+.get(familiarsController.fetchFamiliar(familiar_id))
 
+/*
 app.route("/users/:user_id")
     .get(usersController.TODO("..."))
     .post(usersController.TODO("..."))
@@ -71,20 +67,19 @@ app.route("/users/:user_id/roster/:roster_id")
  */
 
 
-app.all("/*", (req, res) => { /* return 403 */ });
-
-// any other resource request
-app.use((req, res, next) => {
-    emitlog([
-        "403",
-        req.method,
-        req.path,
-    ]);
+app.all("*", (req, res) => {
     res.status(404).json({error: "Resource not found."});
 });
 
+
 app.use((err, req, res, next) => {
-    emitLog(["Call failed unrecoverably", req.path]);
+    console.error(
+        new Date().toISOString(),
+        " : ",
+        "Call failed unrecoverably!",
+        " : ",
+        req.path,
+    );
     console.error(err.stack);
     res.status(404).json({error: `Error accessing resource. ${err}`});
 });
