@@ -1,5 +1,4 @@
 import familiar from "../models/familiars.mjs";
-// const familiar = require("../models/familiars.mjs");
 
 function getFamiliarList(req, res) {
     let familiarList = familiar.find().projection(exclude { '_id' })
@@ -17,16 +16,7 @@ function getFamiliarById(req, res) {
     }
 }
 
-function postNewFamiliar(newFamiliar) {
-    let maxCurrentFamiliarId = data.familiars[data.familiars.length - 1].familiar_id;
-    newFamiliar.familiar_id = maxCurrentFamiliarId + 1;
-    data.familiars.push(newFamiliar);
-    saveData();
-    return newFamiliar;
-}
-
 module.exports = {
     getFamiliarList,
     getFamiliarById,
-    postNewFamiliar,
 };
