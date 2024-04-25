@@ -1,0 +1,1023 @@
+[
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00feccb"
+        },
+        "name": "Ferret",
+        "description": "Nature's recipe for ferrets: start with a healthy base of creative problem solving, natural inquisitiveness, and a thirst for adventure; stir in roughly equal parts ADHD (hyperactive/impulsive flavor), ADHD (inattentive flavor), kleptomania, OCD, and narcolepsy. Pour the mixture into a tube of irresistably cuddly fur, and make them <em>smart</em> enough to know that they're <em>cute</em> enough to get away with anything. Season to taste with derpiness.",
+        "stats": {
+            "offense": 4,
+            "defense": 4,
+            "intelligence": 4,
+            "riz": 6,
+            "cuddle_inspiration": 5,
+            "cuddle_tolerance": 3,
+            "stealth": 5,
+            "intimidation": 4,
+            "peril": 1
+        },
+        "stat_notes": {
+            "peril": "Likes to launch sneak attacks on sleeping opponents. Not to be murderous; just because they think it's funny."
+        }
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00feccc"
+        },
+        "name": "Koala",
+        "description": "Consummate assholes.",
+        "stats": {
+            "offense": 3,
+            "defense": 3,
+            "intelligence": 1,
+            "riz": 2,
+            "cuddle_inspiration": 3,
+            "cuddle_tolerance": 1,
+            "stealth": 1,
+            "intimidation": 2,
+            "peril": 4
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00feccd"
+        },
+        "name": "Wombat",
+        "description": "The wombat has a <em>weaponized ass</em> which it uses to literally crush the skulls of its attackers.",
+        "stats": {
+            "offense": 3,
+            "defense": 4,
+            "intelligence": 2,
+            "riz": 4,
+            "cuddle_inspiration": 2,
+            "cuddle_tolerance": 3,
+            "stealth": 1,
+            "intimidation": 2,
+            "peril": 1
+        },
+        "stat_notes": {
+            "offense": "6 in tunnels and corridors."
+        }
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecce"
+        },
+        "name": "Earthworm",
+        "description": "pretty chill",
+        "stats": {
+            "offense": 0,
+            "defense": 0,
+            "intelligence": 0,
+            "riz": 1,
+            "cuddle_inspiration": 1,
+            "cuddle_tolerance": 4,
+            "stealth": 6,
+            "intimidation": 1,
+            "peril": 0
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00feccf"
+        },
+        "name": "Chinchilla",
+        "description": "Their fur is one of the softest substances in existence. So it makes sense that they are completely convinced every single creature they meet is intent upon murdering and skinning them.",
+        "stats": {
+            "offense": 0,
+            "defense": 2,
+            "intelligence": 2,
+            "riz": 4,
+            "cuddle_inspiration": 6,
+            "cuddle_tolerance": 1,
+            "stealth": 3,
+            "intimidation": 0,
+            "peril": 0
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecd0"
+        },
+        "name": "Capybara",
+        "description": "The stoic and cool-headed capybara is ready to handle any emergency, and they will dominate any poker table.",
+        "stats": {
+            "offense": 1,
+            "defense": 4,
+            "intelligence": 3,
+            "riz": 2,
+            "cuddle_inspiration": 3,
+            "cuddle_tolerance": 3,
+            "stealth": 1,
+            "intimidation": 1,
+            "peril": 5
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecd1"
+        },
+        "name": "Fist-sized Rock",
+        "description": "Fist-sized rock's granitic exterior belies its warm heart; once bound, it is intensely loyal, and will never stray from your side. Also: please carry Fist-sized Rock by your side, as it is completely immobile.",
+        "stats": {
+            "offense": 4,
+            "defense": 6,
+            "intelligence": 6,
+            "riz": 3,
+            "cuddle_inspiration": 1,
+            "cuddle_tolerance": 6,
+            "stealth": 5,
+            "intimidation": 4,
+            "peril": 3
+        },
+        "stat_notes": {
+            "offense": "Fist-sized Rock can perform very powerful blunt force attacks, but it relies heavily on teamwork; i.e., someone has to throw it.",
+            "peril": "You may trip on it going to the bathroom."
+        }
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecd2"
+        },
+        "name": "Star-nosed Mole",
+        "description": "looks like a pet for a child illithid",
+        "stats": {
+            "offense": 1,
+            "defense": 2,
+            "intelligence": 2,
+            "riz": 0,
+            "cuddle_inspiration": 1,
+            "cuddle_tolerance": 3,
+            "stealth": 4,
+            "intimidation": 2,
+            "peril": 1
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecd3"
+        },
+        "name": "A Severed Finger",
+        "description": "You have no idea how the former owner feels about this.",
+        "stats": {
+            "offense": 1,
+            "defense": 1,
+            "intelligence": 4,
+            "riz": 1,
+            "cuddle_inspiration": 0,
+            "cuddle_tolerance": 4,
+            "stealth": 3,
+            "intimidation": 1,
+            "peril": 3
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecd4"
+        },
+        "name": "Charming Pig",
+        "description": "He looks like the kind of pig who will help you carry your groceries while still listening intently to how your day went.",
+        "stats": {
+            "offense": 2,
+            "defense": 4,
+            "intelligence": 5,
+            "riz": 6,
+            "cuddle_inspiration": 5,
+            "cuddle_tolerance": 4,
+            "stealth": 2,
+            "intimidation": 0,
+            "peril": 0
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecd5"
+        },
+        "name": "Displacer Goldfish",
+        "description": "It looks like it is floating in the air two feet to the right of its bowl.",
+        "stats": {
+            "offense": 0,
+            "defense": 1,
+            "intelligence": 0,
+            "riz": 2,
+            "cuddle_inspiration": 0,
+            "cuddle_tolerance": 0,
+            "stealth": 3,
+            "intimidation": 0,
+            "peril": 0
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecd6"
+        },
+        "name": "Pseudocrab",
+        "description": "It turns out, most crabs aren't \"true crabs\".",
+        "stats": {
+            "offense": 3,
+            "defense": 3,
+            "intelligence": 3,
+            "riz": 3,
+            "cuddle_inspiration": 2,
+            "cuddle_tolerance": 2,
+            "stealth": 2,
+            "intimidation": 2,
+            "peril": 2
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecd7"
+        },
+        "name": "Dire Hamster",
+        "description": "In this case, \"dire\" means pessimistic and melodramatic.",
+        "stats": {
+            "offense": 3,
+            "defense": 3,
+            "intelligence": 2,
+            "riz": 3,
+            "cuddle_inspiration": 3,
+            "cuddle_tolerance": 3,
+            "stealth": 2,
+            "intimidation": 1,
+            "peril": 3
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecd8"
+        },
+        "name": "Giant Pillbug",
+        "description": "Also great for playing recreational sports in the downtime between adventures.",
+        "stats": {
+            "offense": 2,
+            "defense": 4,
+            "intelligence": 2,
+            "riz": 4,
+            "cuddle_inspiration": 4,
+            "cuddle_tolerance": 5,
+            "stealth": 4,
+            "intimidation": 2,
+            "peril": 0
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecd9"
+        },
+        "name": "Pangolin",
+        "description": "",
+        "stats": {
+            "offense": 3,
+            "defense": 5,
+            "intelligence": 3,
+            "riz": 4,
+            "cuddle_inspiration": 5,
+            "cuddle_tolerance": 2,
+            "stealth": 2,
+            "intimidation": 3,
+            "peril": 0
+        },
+        "stat_notes": {
+            "defense": "It's basically an anteater in plate mail."
+        }
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecda"
+        },
+        "name": "Furby",
+        "description": "",
+        "stats": {
+            "offense": 5,
+            "defense": 2,
+            "intelligence": 1,
+            "riz": 0,
+            "cuddle_inspiration": 0,
+            "cuddle_tolerance": 6,
+            "stealth": 1,
+            "intimidation": 6,
+            "peril": 6
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecdb"
+        },
+        "name": "Babbling Skull",
+        "description": "",
+        "stats": {
+            "offense": 3,
+            "defense": 3,
+            "intelligence": 4,
+            "riz": 2,
+            "cuddle_inspiration": 1,
+            "cuddle_tolerance": 5,
+            "stealth": 0,
+            "intimidation": 4,
+            "peril": 3
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecdc"
+        },
+        "name": "Mickey Mouse",
+        "description": "",
+        "stats": {
+            "offense": 3,
+            "defense": 5,
+            "intelligence": 6,
+            "riz": 2,
+            "cuddle_inspiration": 2,
+            "cuddle_tolerance": 6,
+            "stealth": 5,
+            "intimidation": 6,
+            "peril": 6
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecdd"
+        },
+        "name": "Jackalope",
+        "description": "",
+        "stats": {
+            "offense": 2,
+            "defense": 3,
+            "intelligence": 3,
+            "riz": 4,
+            "cuddle_inspiration": 4,
+            "cuddle_tolerance": 1,
+            "stealth": 4,
+            "intimidation": 2,
+            "peril": 0
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecde"
+        },
+        "name": "Tardigrade Colony",
+        "description": "",
+        "stats": {
+            "offense": 1,
+            "defense": 2,
+            "intelligence": 4,
+            "riz": 3,
+            "cuddle_inspiration": 2,
+            "cuddle_tolerance": 5,
+            "stealth": 6,
+            "intimidation": 0,
+            "peril": 0
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecdf"
+        },
+        "name": "Alpaca",
+        "description": "",
+        "stats": {
+            "offense": 2,
+            "defense": 1,
+            "intelligence": 2,
+            "riz": 2,
+            "cuddle_inspiration": 2,
+            "cuddle_tolerance": 1,
+            "stealth": 1,
+            "intimidation": 0,
+            "peril": 4
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fece0"
+        },
+        "name": "Crab with a Knife",
+        "description": "",
+        "stats": {
+            "offense": 4,
+            "defense": 4,
+            "intelligence": 2,
+            "riz": 2,
+            "cuddle_inspiration": 2,
+            "cuddle_tolerance": 0,
+            "stealth": 2,
+            "intimidation": 5,
+            "peril": 3
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fece1"
+        },
+        "name": "Surly Badger",
+        "description": "",
+        "stats": {
+            "offense": 5,
+            "defense": 3,
+            "intelligence": 3,
+            "riz": 4,
+            "cuddle_inspiration": 4,
+            "cuddle_tolerance": 0,
+            "stealth": 2,
+            "intimidation": 4,
+            "peril": 2
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fece2"
+        },
+        "name": "Luna Moth",
+        "description": "",
+        "stats": {
+            "offense": 0,
+            "defense": 1,
+            "intelligence": 1,
+            "riz": 6,
+            "cuddle_inspiration": 4,
+            "cuddle_tolerance": 0,
+            "stealth": 2,
+            "intimidation": 0,
+            "peril": 0
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fece3"
+        },
+        "name": "Patch of Moss",
+        "description": "",
+        "stats": {
+            "offense": 0,
+            "defense": 0,
+            "intelligence": 1,
+            "riz": 4,
+            "cuddle_inspiration": 4,
+            "cuddle_tolerance": 0,
+            "stealth": 6,
+            "intimidation": 0,
+            "peril": 0
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fece4"
+        },
+        "name": "Pseudodragon Who Has Not Yet Fully Hatched",
+        "description": "",
+        "stats": {
+            "offense": 1,
+            "defense": 4,
+            "intelligence": 3,
+            "riz": 4,
+            "cuddle_inspiration": 3,
+            "cuddle_tolerance": 2,
+            "stealth": 1,
+            "intimidation": 1,
+            "peril": 2
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fece5"
+        },
+        "name": "Well-carved Pumpkin",
+        "description": "",
+        "stats": {
+            "offense": 2,
+            "defense": 2,
+            "intelligence": 3,
+            "riz": 4,
+            "cuddle_inspiration": 3,
+            "cuddle_tolerance": 4,
+            "stealth": 0,
+            "intimidation": 1,
+            "peril": 4
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fece6"
+        },
+        "name": "Sparrow",
+        "description": "",
+        "stats": {
+            "offense": 1,
+            "defense": 4,
+            "intelligence": 2,
+            "riz": 3,
+            "cuddle_inspiration": 3,
+            "cuddle_tolerance": 0,
+            "stealth": 6,
+            "intimidation": 0,
+            "peril": 2
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fece7"
+        },
+        "name": "Burning Bush",
+        "description": "",
+        "stats": {
+            "offense": 4,
+            "defense": 2,
+            "intelligence": 4,
+            "riz": 2,
+            "cuddle_inspiration": 0,
+            "cuddle_tolerance": 5,
+            "stealth": 0,
+            "intimidation": 5,
+            "peril": 6
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fece8"
+        },
+        "name": "Miniature Moose",
+        "description": "",
+        "stats": {
+            "offense": 3,
+            "defense": 3,
+            "intelligence": 2,
+            "riz": 5,
+            "cuddle_inspiration": 4,
+            "cuddle_tolerance": 2,
+            "stealth": 4,
+            "intimidation": 4,
+            "peril": 1
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fece9"
+        },
+        "name": "Komodo Wyvern",
+        "description": "Smaller cousin of the Komodo Dragon. The wings are purely vestigial.",
+        "stats": {
+            "offense": 6,
+            "defense": 5,
+            "intelligence": 2,
+            "riz": 3,
+            "cuddle_inspiration": 1,
+            "cuddle_tolerance": 0,
+            "stealth": 2,
+            "intimidation": 6,
+            "peril": 2
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecea"
+        },
+        "name": "Goose",
+        "description": "",
+        "stats": {
+            "offense": 4,
+            "defense": 4,
+            "intelligence": 1,
+            "riz": 2,
+            "cuddle_inspiration": 2,
+            "cuddle_tolerance": 0,
+            "stealth": 2,
+            "intimidation": 5,
+            "peril": 5
+        },
+        "stat_notes": {
+            "riz": "Notoriously cranky. Even the Canadians!"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00feceb"
+        },
+        "name": "Portuguese Manowar",
+        "description": "",
+        "stats": {
+            "offense": 6,
+            "defense": 3,
+            "intelligence": 0,
+            "riz": 4,
+            "cuddle_inspiration": 0,
+            "cuddle_tolerance": 5,
+            "stealth": 3,
+            "intimidation": 6,
+            "peril": 0
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecec"
+        },
+        "name": "Teddy Bear",
+        "description": "",
+        "stats": {
+            "offense": 1,
+            "defense": 6,
+            "intelligence": 1,
+            "riz": 6,
+            "cuddle_inspiration": 6,
+            "cuddle_tolerance": 6,
+            "stealth": 3,
+            "intimidation": 0,
+            "peril": 0
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00feced"
+        },
+        "name": "Hawaiian Pizza",
+        "description": "",
+        "stats": {
+            "offense": 5,
+            "defense": 5,
+            "intelligence": 0,
+            "riz": 0,
+            "cuddle_inspiration": 0,
+            "cuddle_tolerance": 5,
+            "stealth": 3,
+            "intimidation": 3,
+            "peril": 5
+        },
+        "stat_notes": {
+            "defense": "Nobody wants to go near it. But also, it's pizza, so you <em>want</em> it to be okay.",
+            "stealth": "It looks just like a real pizza."
+        }
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecee"
+        },
+        "name": "War Cow",
+        "description": "Coincidentally, plate mail barding sounds exactly like a cowbell.",
+        "stats": {
+            "offense": 4,
+            "defense": 5,
+            "intelligence": 1,
+            "riz": 2,
+            "cuddle_inspiration": 4,
+            "cuddle_tolerance": 4,
+            "stealth": 0,
+            "intimidation": 3,
+            "peril": 0
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecef"
+        },
+        "name": "Daisy",
+        "description": "",
+        "stats": {
+            "offense": 0,
+            "defense": 0,
+            "intelligence": 1,
+            "riz": 4,
+            "cuddle_inspiration": 1,
+            "cuddle_tolerance": 3,
+            "stealth": 3,
+            "intimidation": 0,
+            "peril": 1
+        },
+        "stat_notes": {
+            "peril": "Only if your allergies are <em>extremely</em> bad."
+        }
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecf0"
+        },
+        "name": "Pug",
+        "description": "",
+        "stats": {
+            "offense": 1,
+            "defense": 2,
+            "intelligence": 2,
+            "riz": 1,
+            "cuddle_inspiration": 0,
+            "cuddle_tolerance": 4,
+            "stealth": -2,
+            "intimidation": 1,
+            "peril": 4
+        },
+        "stat_notes": {
+            "stealth": "Its snorting and wheezing <b>attracts</b> attention."
+        }
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecf1"
+        },
+        "name": "Narwhal",
+        "description": "Would be a great choice for aquatic denizens and adventurers. Too bad they're not real.",
+        "stats": {
+            "offense": 4,
+            "defense": 4,
+            "intelligence": 3,
+            "riz": 3,
+            "cuddle_inspiration": 4,
+            "cuddle_tolerance": 2,
+            "stealth": 6,
+            "intimidation": 4,
+            "peril": 0
+        },
+        "stat_notes": {
+            "offense": "Its horn is actually a tooth!",
+            "defense": "Parry! Riposte! Floss!"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecf2"
+        },
+        "name": "Chicken",
+        "description": "have wings every night!",
+        "stats": {
+            "offense": 0,
+            "defense": 0,
+            "intelligence": 1,
+            "riz": 4,
+            "cuddle_inspiration": 2,
+            "cuddle_tolerance": 3,
+            "stealth": 1,
+            "intimidation": 0,
+            "peril": 2
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecf3"
+        },
+        "name": "Sea Monkeys",
+        "description": "As you can see in the illustration, this is a kingdom of tiny Merfolk.",
+        "stats": {
+            "offense": 0,
+            "defense": 1,
+            "intelligence": 5,
+            "riz": 2,
+            "cuddle_inspiration": 1,
+            "cuddle_tolerance": 1,
+            "stealth": 4,
+            "intimidation": 1,
+            "peril": 5
+        },
+        "stat_notes": {
+            "peril": "Their Kingdom shall rise again!"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecf4"
+        },
+        "name": "Swarm of Head Lice",
+        "description": "They also help ensure nobody steals your pointy wizard hat.",
+        "stats": {
+            "offense": 2,
+            "defense": 2,
+            "intelligence": 1,
+            "riz": 0,
+            "cuddle_inspiration": 0,
+            "cuddle_tolerance": 6,
+            "stealth": 4,
+            "intimidation": 4,
+            "peril": 0
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecf5"
+        },
+        "name": "Swarm of Bedbugs",
+        "description": "Creatures who own or reside in nearby structures become hostile toward you.",
+        "stats": {
+            "offense": 2,
+            "defense": 4,
+            "intelligence": 1,
+            "riz": 0,
+            "cuddle_inspiration": 0,
+            "cuddle_tolerance": 5,
+            "stealth": 5,
+            "intimidation": 5,
+            "peril": 0
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecf6"
+        },
+        "name": "Starfish",
+        "description": "A little clingy, but gives great hugs.",
+        "stats": {
+            "offense": 2,
+            "defense": 4,
+            "intelligence": 1,
+            "riz": 2,
+            "cuddle_inspiration": 1,
+            "cuddle_tolerance": 4,
+            "stealth": 3,
+            "intimidation": 1,
+            "peril": 0
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecf7"
+        },
+        "name": "Jello Mold",
+        "description": "Lime, with mixed fruit inside.",
+        "stats": {
+            "offense": 0,
+            "defense": 1,
+            "intelligence": 1,
+            "riz": 2,
+            "cuddle_inspiration": 2,
+            "cuddle_tolerance": 3,
+            "stealth": 1,
+            "intimidation": 1,
+            "peril": 1
+        },
+        "stat_notes": {
+            "peril": "Are you at risk of diabetes?"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecf8"
+        },
+        "name": "Giant Mantis",
+        "description": "",
+        "stats": {
+            "offense": 6,
+            "defense": 3,
+            "intelligence": 3,
+            "riz": 5,
+            "cuddle_inspiration": 2,
+            "cuddle_tolerance": 5,
+            "stealth": 4,
+            "intimidation": 6,
+            "peril": 6
+        },
+        "stat_notes": {
+            "riz": "A charismatic megafauna to be sure.",
+            "cuddle_inspiration": "You can try, but you better wear a helmet.",
+            "cuddle_tolerance": "As far as she's concerned, cuddles are GrubHub."
+        }
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecf9"
+        },
+        "name": "Blue Jay",
+        "description": "The bard of the bird world. Great variety in songs, might be a brawny jock or a sullen goth or a musical primadonna.",
+        "stats": {
+            "offense": 3,
+            "defense": 3,
+            "intelligence": 4,
+            "riz": 4,
+            "cuddle_inspiration": 3,
+            "cuddle_tolerance": 1,
+            "stealth": 2,
+            "intimidation": 5,
+            "peril": 2
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecfa"
+        },
+        "name": "Deep Sea Anemone",
+        "description": "",
+        "stats": {
+            "offense": 3,
+            "defense": 2,
+            "intelligence": 1,
+            "riz": 3,
+            "cuddle_inspiration": 5,
+            "cuddle_tolerance": 3,
+            "stealth": 3,
+            "intimidation": 2,
+            "peril": 0
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecfb"
+        },
+        "name": "Raccoon",
+        "description": "Traveling trash panda",
+        "stats": {
+            "offense": 3,
+            "defense": 3,
+            "intelligence": 4,
+            "riz": 5,
+            "cuddle_inspiration": 5,
+            "cuddle_tolerance": 3,
+            "stealth": 2,
+            "intimidation": 3,
+            "peril": 0
+        },
+        "stat_notes": {}
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecfc"
+        },
+        "name": "Possum",
+        "description": "",
+        "stats": {
+            "offense": 3,
+            "defense": 2,
+            "intelligence": 3,
+            "riz": 4,
+            "cuddle_inspiration": 5,
+            "cuddle_tolerance": 2,
+            "stealth": 2,
+            "intimidation": 4,
+            "peril": 0
+        },
+        "stat_notes": {
+            "defense": "Sadly, defensive thanatosis is not very effective in combat."
+        }
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecfd"
+        },
+        "name": "Pigeon",
+        "description": "Excellent navigators and proven couriers.",
+        "stats": {
+            "offense": 3,
+            "defense": 2,
+            "intelligence": 4,
+            "riz": 3,
+            "cuddle_inspiration": 2,
+            "cuddle_tolerance": 3,
+            "stealth": 1,
+            "intimidation": 1,
+            "peril": 0
+        },
+        "stat_notes": {
+            "riz": "The beauty of their iridescent neck feathers doesn't quite make up for their vacant, soulless eyes."
+        }
+    },
+    {
+        "_id": {
+            "$oid": "6629fb88374fd86cd00fecfe"
+        },
+        "name": "Swarm of Dermestid Beetles",
+        "description": "Voracious little critters with a taste for all things dead and fleshy. When you have a body to hide or a zombie outbreak to quell, these are the bugs to call.",
+        "stats": {
+            "offense": 0,
+            "defense": 3,
+            "intelligence": 3,
+            "riz": 3,
+            "cuddle_inspiration": 1,
+            "cuddle_tolerance": 4,
+            "stealth": 3,
+            "intimidation": 3,
+            "peril": 0
+        },
+        "stat_notes": {}
+    }
+]
