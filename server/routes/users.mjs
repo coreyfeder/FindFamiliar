@@ -1,17 +1,17 @@
-import user from "../models/users.mjs";
+import User from "../models/users.mjs";
 
 // sample/outline functions. don't write them until I finalize the "user" flow
 // make sure to use async/await
-
+/*
 function saveUserIdToClient() {
     // TODO
     // save the user's ID in localStorage/cookie/whatever
-}
+};
 
 function fetchUserIdFromClient() {
     // TODO
     // read the user's ID from localStorage/cookie/whatever
-}
+};
 
 function deleteUser(id) {
     // TODO
@@ -19,7 +19,7 @@ function deleteUser(id) {
     // "auth": make sure the id given matches the storage id
     // "delete": delete the id from storage
     // if I have time: actually delete the DB record
-}
+};
 
 function createId() {
     // TODO
@@ -27,7 +27,7 @@ function createId() {
     // make a randomish string as a user ID
     // save it in a cookie?
     // --> just use the ObjectID?
-}
+};
 
 function createNewOldUser() {
     // TODO
@@ -40,30 +40,36 @@ function createNewOldUser() {
     //  accept any username and password
     //  or accept any username and make it unique-ish by adding the IP
     // TBD
-}
-
-async function fetchUser(id) {
-    // TODO
-    //
-    let foundUser = await user.findOne( /* ... */ )
-        .exec()
-        .populate("roster.familiars")  // https://mongoosejs.com/docs/api/document.html#Document.prototype.populate()
-    if (!(notes)) {
-        console.debug(`Requested note_id "${note_id}" did not match any records.`)
-    }
-    res.json({notes: notes})
-
-}
-
-/* s
-async function internallyProcessApiRequest(req, res) {
-    doStuffWithRequest(req);
-    call_database(req.params.some_variable_from_the_path);
-    etc();
-    res.send("a result");
-}
- */
-module.exports = {
-    internallyProcessApiRequest,
-    internallyProcessAnotherApiRequest,
 };
+ */
+
+async function fetchUsers(req, res) {
+    let foundUsers = await User.find()
+        .populate(this.roster)  // https://mongoosejs.com/docs/api/document.html#Document.prototype.populate()
+        .exec()
+        ;
+    console.debug("DEBUG:", "foundUsers:", foundUsers)
+    if (!(foundUsers)) {
+        console.debug(`No users found.`);
+    };
+    res.json({"users": foundUsers});
+};
+
+async function fetchUser(req, res) {
+    let foundUser = await User.findOne( { _id: req.params.id } )
+        .populate("roster.familiars")  // https://mongoosejs.com/docs/api/document.html#Document.prototype.populate()
+        .exec()
+        ;
+    if (!(notes)) {
+        console.debug(`No user found with id "${req.params.id}".`);
+    }
+    res.json(foundUser);
+};
+
+
+const userRoutes = {
+    fetchUser,
+    fetchUsers,
+};
+
+export default userRoutes;

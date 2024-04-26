@@ -27,7 +27,6 @@ const familiarSchema = new mongoose.Schema({
     },
 });
 
-// const Familiar = mongoose.model(schema=familiarSchema, collection="familiars");
 const Familiar = mongoose.model("Familiar", familiarSchema);
 
 export default Familiar;

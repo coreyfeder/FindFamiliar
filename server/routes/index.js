@@ -1,7 +1,11 @@
-import familiarRoutes from "./familiars.js"
+import familiarRoutes from "./familiars.mjs";
+import userRoutes from "./users.mjs";
+// import rosterRoutes from "./rosters.js";
 
 const routes = {
-    familiarRoutes: familiarRoutes,
-}
+    familiars: familiarRoutes,
+    users: userRoutes,
+    // rosters: rosterRoutes,
+};
 
 export default routes;

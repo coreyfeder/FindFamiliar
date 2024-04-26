@@ -3,13 +3,10 @@ import connectDB from "./config/db.js";
 import cors from "cors"
 import express from "express";
 import routes from "./routes/index.js";
-// import familiarRoutes from "./routes/familiars.js";
-// import rostersController from "./routes/rosters.js";
-// import usersController from "./routes/users.js";
 
 
 const port = process.env.PORT || 5000;
-connectDB();
+await connectDB();
 
 const app = express();
 const router = express.Router();
@@ -38,16 +35,20 @@ router.use((req, res, next) => {
 
 // ROUTES
 
-
-// familiars stays read-only
+// <familiars> stays READ-ONLY
 app.route("/familiars")
-    // .all((req,res) => )
-    .get((req, res) => routes.familiarRoutes.getFamiliarList(req, res))
-    app.route("/familiars/id/:familiar_id")
-    .get((req, res) => routes.familiarRoutes.getFamiliarById(req, res))
-    app.route("/familiars/name/:familiar_name")
-    .get((req, res) => routes.familiarRoutes.getFamiliarByName(req, res));
+    .get((req, res) => routes.familiars.listFamiliarNames(req, res));
+app.route("/familiars/details")
+    .get((req, res) => routes.familiars.listFamiliars(req, res));
+app.route("/familiars/details/:familiar_id")
+    .get((req, res) => routes.familiars.fetchFamiliarById(req, res));
+app.route("/familiars/id/:familiar_id")
+    .get((req, res) => routes.familiars.fetchFamiliarById(req, res));
+app.route("/familiars/name/:familiar_name")
+    .get((req, res) => routes.familiars.fetchFamiliarByName(req, res));
 
+app.route("/users")
+    .get((req, res) => routes.users.fetchUsers(req, res));
 /*
 app.route("/users/:user_id")
     .get(usersController.TODO("..."))
@@ -71,7 +72,7 @@ app.route("/users/:user_id/roster/:roster_id")
 
 
 app.all("*", (req, res) => {
-    res.status(404).json({error: "Resource not found."});
+    res.status(404).send({error: "You have made an invalid HTTP call or called a nonexistent resource."});
 });
 
 
@@ -79,15 +80,13 @@ app.use((err, req, res, next) => {
     console.error(
         [
             new Date().toISOString(),
-            "Call failed unrecoverably!",
+            "ERROR! Call failed unrecoverably!",
             req.path,
         ].join(" : ")
     );
     console.error(err.stack);
     res.status(404).json({error: `Error accessing resource. ${err}`});
 });
-
-
 
 
 

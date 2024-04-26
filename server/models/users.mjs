@@ -7,6 +7,7 @@ import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
     name: { type: String, trim: true, required: true, default: "Caretaker" },
+    // roster: [ rosterSchema ],
     roster: [
         new mongoose.Schema({
             name: {
@@ -14,7 +15,7 @@ const userSchema = new mongoose.Schema({
                 required: true,
                 maxlength: 42,
                 trim: true,
-                default: this.familiar.name,
+                // default: `\${this.familiar.name}`,
             },
             familiar: {
                 type: mongoose.SchemaTypes.ObjectId,
@@ -31,5 +32,5 @@ const userSchema = new mongoose.Schema({
     ],
 });
 
-const User = mongoose.model((schema = userSchema), (collection = "users"));
+const User = mongoose.model("User", userSchema);
 export default User;
