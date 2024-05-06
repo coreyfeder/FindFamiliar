@@ -2,7 +2,11 @@ import "dotenv/config";
 import connectDB from "./config/db.js";
 import cors from "cors"
 import express from "express";
-import routes from "./routes/index.js";
+import familiarRoutes from "./routes/familiars.mjs";
+import userRoutes from "./routes/users.mjs";
+import internalRoutes from "./routes/internal.mjs";
+import { log, L } from "./config/logging.js";
+import { model } from "mongoose"
 
 
 const port = process.env.PORT || 5000;
@@ -10,24 +14,49 @@ await connectDB();
 
 const app = express();
 const router = express.Router();
+const debugrouter = express.Router();
+debugrouter.text = L.fg.blue;
 
 app.use(cors());
 app.use(express.json());
 app.use("/", router);
+if (process.env.MODE == 'DEBUG') {
+    app.use("/", debugrouter);
+    console.log("\x1b[35m");  // ANSI escape code. Different terminals may portray different colors.
+    console.log("WARNING: DEBUG MODE.");
+    console.log("Request bodies will be emit to the log.");
+    console.log("There's no PII to worry about, but it'll get pretty busy.");
+    console.log("\x1b[0m");  // back to normal
+}
 
 
 // ROUTER
 
 // router logs all the incoming calls, before they're processed
 router.use((req, res, next) => {
-    console.log(
+    log(
         [
             new Date().toISOString(),
             "req",
             req.method,
             req.path,
-            JSON.stringify(req.body),
         ].join(" : ")
+    );
+    next();
+});
+
+// if we're in debug mode, output the entire request body
+debugrouter.use((req, res, next) => {
+    log(
+        debugrouter.text,
+        [
+            new Date().toISOString() + " : DEBUG",
+            "url:" + req.url,
+            "route:" + req.route,
+            "params:" + req.params,
+            "rawHeaders:" + req.rawHeaders,
+            "body: " + JSON.stringify(req.body),
+        ].join("\n >> ")
     );
     next();
 });
@@ -35,38 +64,48 @@ router.use((req, res, next) => {
 
 // ROUTES
 
+if (process.env.MODE == 'DEBUG') {
+    app.route("/userlist").get((req, res) => internalRoutes.fetchUsersList(req, res));
+}
+
 // <familiars> stays READ-ONLY
-app.route("/familiars")
-    .get((req, res) => routes.familiars.listFamiliarNames(req, res));
-app.route("/familiars/details")
-    .get((req, res) => routes.familiars.listFamiliars(req, res));
-app.route("/familiars/details/:familiar_id")
-    .get((req, res) => routes.familiars.fetchFamiliarById(req, res));
-app.route("/familiars/id/:familiar_id")
-    .get((req, res) => routes.familiars.fetchFamiliarById(req, res));
-app.route("/familiars/name/:familiar_name")
-    .get((req, res) => routes.familiars.fetchFamiliarByName(req, res));
+app.route("/familiars").get((req, res) =>
+    familiarRoutes.listFamiliarNames(req, res));
+app.route("/familiars/:familiar_id").get((req, res) =>
+    familiarRoutes.fetchFamiliarById(req, res));
+app.route("/familiars/details").get((req, res) =>
+    familiarRoutes.listFamiliars(req, res));
+app.route("/familiars/details/:familiar_id").get((req, res) =>
+    familiarRoutes.fetchFamiliarById(req, res));  // duplicates "familiars/:familiar_id"
+app.route("/familiars/id/:familiar_id").get((req, res) =>
+    familiarRoutes.fetchFamiliarById(req, res));
+app.route("/familiars/name/:familiar_name").get((req, res) =>
+    familiarRoutes.fetchFamiliarByName(req, res));
 
-app.route("/users")
-    .get((req, res) => routes.users.fetchUsers(req, res));
-/*
+app.route("/users/")
+    // .get((req, res) => NO)
+    .post((req, res) => userRoutes.TODO(req, res))
+    .put((req, res) => userRoutes.TODO(req, res))
+    .delete((req, res) => userRoutes.TODO(req, res));
+
 app.route("/users/:user_id")
-    .get(usersController.TODO("..."))
-    .post(usersController.TODO("..."))
-    .put(usersController.TODO("..."))
-    .delete(usersController.TODO("..."));
+    .get((req, res) => userRoutes.TODO(req, res))
+    .post((req, res) => userRoutes.TODO(req, res))
+    .put((req, res) => userRoutes.TODO(req, res))
+    .delete((req, res) => userRoutes.TODO(req, res));
 
+/*
 app.route("/users/:user_id/roster")
-    .get(rostersController.TODO("..."))
-    .post(rostersController.TODO("..."))
-    .put(rostersController.TODO("..."))
-    .delete(rostersController.TODO("..."));
+    .get(rosterRoutes.TODO(req, res));
+    .post(rosterRoutes.TODO(req, res));
+    .put(rosterRoutes.TODO(req, res));
+    .delete(rosterRoutes.TODO(req, res));
 
 app.route("/users/:user_id/roster/:roster_id")
-    .get(rostersController.TODO("..."))
-    .post(rostersController.TODO("..."))
-    .put(rostersController.TODO("..."))
-    .delete(rostersController.TODO("..."));
+    .get(rosterRoutes.TODO(req, res));
+    .post(rosterRoutes.TODO(req, res));
+    .put(rosterRoutes.TODO(req, res));
+    .delete(rosterRoutes.TODO(req, res));
 
  */
 
@@ -94,5 +133,5 @@ app.use((err, req, res, next) => {
 // ENGAGE
 
 app.listen(port, ()=>{
-    console.log(`FFAPI listening on port ${port}`)
+    log(L.fg.yellow, L.bright, `FindFamiliar API listening on port ${port}\n`);
 });
